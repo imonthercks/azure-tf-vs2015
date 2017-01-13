@@ -1,0 +1,1 @@
+powershell.exe -ExecutionPolicy RemoteSigned -File .\remote\startMstscSession.ps1
