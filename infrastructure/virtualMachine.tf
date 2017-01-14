@@ -9,7 +9,7 @@ resource "azurerm_virtual_machine" "default" {
     storage_image_reference {
         publisher = "MicrosoftVisualStudio"
         offer = "VisualStudio"
-        sku = "VS-2015-Comm-AzureSDK-2.9-WS2012R2"
+        sku = "VS-2015-Comm-AzureSDK-29-WS2012R2"
         version = "latest"
     }
 
