@@ -1,3 +1,4 @@
+cd .\infrastructure
 $fqdn = terraform output fqdn
 
 if ($LastExitCode -ne 0) {
@@ -6,3 +7,5 @@ if ($LastExitCode -ne 0) {
 else{
 	Start-Process "$env:windir\system32\mstsc.exe" -ArgumentList "/v:$fqdn"
 }
+
+cd ..
