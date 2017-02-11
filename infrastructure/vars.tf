@@ -10,12 +10,11 @@ variable "vm_size" {
 
 variable "admin_username" {
     description = "Username for the Administrator account"
-    default = "TestAdmin"
+    default = "vsdevadmin"
 }
 
 variable "admin_password" {
     description = "Password for the Administrator account"
-    default = "Password1234!"
 }
 
 variable "vm_winrm_port" {
