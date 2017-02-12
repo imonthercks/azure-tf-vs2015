@@ -5,7 +5,7 @@ variable "vm_name_prefix" {
 
 variable "vm_size" {
 	description = "The size of the Virtual Machine"
-	default = "Standard_DS1_V2"
+	default = "Standard_DS2_V2"
 }
 
 variable "admin_username" {
