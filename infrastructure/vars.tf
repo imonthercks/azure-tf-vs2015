@@ -1,3 +1,8 @@
+variable "resource_group_name" {
+	description = "Resource Group Name"
+	default = "azuredevrg"
+}
+
 variable "vm_name_prefix" { 
 	description = "The Virtual Machine Name"
     default = "cj-dev-vm"

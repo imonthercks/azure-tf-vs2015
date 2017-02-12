@@ -3,7 +3,7 @@ provider "azurerm" {}
 
 # Create a resource group
 resource "azurerm_resource_group" "default" {
-    name     = "azuredevrg"
+    name     = "${var.resource_group_name}"
     location = "${var.azure_region_fullname}"
 }
 
