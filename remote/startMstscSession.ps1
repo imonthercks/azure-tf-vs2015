@@ -9,12 +9,13 @@ if ($LastExitCode -ne 0) {
 }
 
 $user = Login-AzureRmAccount
+	
 $status = Get-AzureRmVM -ResourceGroupName $rgname -Name $vmname -Status
-
 if (($status.Statuses | Where {$_.Code -Match "PowerState/deallocated"}).DisplayStatus -eq "VM deallocated") {
 	Write-Host "VM was not started.  Starting now..."
 	Start-AzureRmVM -ResourceGroupName $rgname -Name $vmname
-	Write-Host "VM Started"
+	Write-Host "VM Started.  Waiting 30 seconds for RDP to be available..."
+	Start-Sleep -s 30
 }
 
 Start-Process "$env:windir\system32\mstsc.exe" -ArgumentList "/v:$fqdn"
